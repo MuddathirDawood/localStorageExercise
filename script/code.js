@@ -1,49 +1,7 @@
 document.querySelector('#addRecord').addEventListener('click',()=>{
-    let rcode = document.querySelector('#rgbR').value;
-    let gcode = document.querySelector('#rgbG').value;
-    let bcode = document.querySelector('#rgbB').value;
-
-    switch (true) {
-        case rcode === '0':
-            rcode = '00';
-            break;
-        case gcode === '0':
-            gcode = '00';
-            break;
-        case bcode === '0':
-            bcode = '00';  
-            break; 
-
-    }
-    switch (true) {
-        case rcode === '0':
-            rcode = '00';
-            break;
-        case gcode === '0':
-            gcode = '00';
-            break;
-        case bcode === '0':
-            bcode = '00';  
-            break; 
-
-    }
-    switch (true) {
-        case rcode === '0':
-            rcode = '00';
-            break;
-        case gcode === '0':
-            gcode = '00';
-            break;
-        case bcode === '0':
-            bcode = '00';  
-            break; 
-
-    }
-
+    let RGB = document.querySelector('#RGB').value
     let colour = document.querySelector('#color');
-    let value = 'rgb(' + rcode + ', ' + gcode + ', ' + bcode + ')';
-    document.querySelector('#RGB').value = value; 
-    colour.style = `background-color: ${value}`;
+    colour.style = `background-color: ${RGB}`;
 })
 
 let people = JSON.parse(localStorage.getItem('records')) ?
@@ -60,7 +18,7 @@ function addData() {
             favouriteColour: document.getElementById('RGB').value,
         }
     );
-    
+
     localStorage.setItem('records',JSON.stringify(people));
 }
 document.querySelector('#addRecord').addEventListener('click', addData);
