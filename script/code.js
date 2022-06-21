@@ -54,18 +54,17 @@ JSON.parse( localStorage.getItem('records')) : [
     }
 ];
 function addData() {
-    // e.preventDefault();
     people.push(
         {
             name: document.getElementById('name').value,
             favouriteColour: document.getElementById('RGB').value,
         }
     );
-    // Save data to a localstorage
+    
     localStorage.setItem('records',JSON.stringify(people));
 }
 document.querySelector('#addRecord').addEventListener('click', addData);
-// Displaying data
+
 (function loadData() {
     console.table(people);
 })();
