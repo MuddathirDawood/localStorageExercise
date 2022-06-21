@@ -46,7 +46,6 @@ document.querySelector('#addRecord').addEventListener('click',()=>{
     colour.style = `background-color: ${value}`;
 })
 
-// localStorage.removeItem('records');
 let people = JSON.parse(localStorage.getItem('records')) ?
 JSON.parse( localStorage.getItem('records')) : [
     {
@@ -70,3 +69,8 @@ document.querySelector('#addRecord').addEventListener('click', addData);
 (function loadData() {
     console.table(people);
 })();
+
+document.querySelector('#delete').addEventListener('click',()=>{
+    localStorage.removeItem('records');
+    alert('Please refresh page to finsh delete process')
+})
