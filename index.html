@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <title>localStorageExercise</title>
+</head>
+<body id="color">
+    <h2>Local Storage Exercise</h2>
+    <form>
+        <div>
+            <label class="ms-3">Name</label>
+            <input type="text" class="form-control w-50 ms-4" id="name" placeholder="Enter thy name" required>
+        </div>
+        <div class="my-3">
+            <div>
+                <label class="ms-3">Red Color (R)</label><br>
+                <input type="number" class="form-control w-50 ms-4" id="rgbR"  placeholder="Enter the red color code">
+            </div>
+            <div>
+                <label class="ms-3">Green Color (G)</label><br>
+                <input type="number" class="form-control w-50 ms-4" id="rgbG"  placeholder="Enter the green color code">
+            </div>
+            <div>
+                <label class="ms-3">Blue Color (B)</label><br>
+                <input type="number" class="form-control w-50 ms-4" id="rgbB"  placeholder="Enter the blue color code">
+            </div>
+            <div>
+                <label class="ms-3">RGB Code</label>
+                <input type="text" class="form-control w-50 ms-4" id="RGB" readonly>
+            </div>
+        </div>
+        <div class="my-3">
+            <button class="btn btn-outline-primary ms-4" id="addRecord">∎ Record</button>
+        </div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script/code.js"></script>
+</body>
+</html>
